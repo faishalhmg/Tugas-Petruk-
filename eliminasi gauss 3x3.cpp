@@ -69,6 +69,5 @@ int main()
         }
     }
 
-    cout << a[2][1];
     return 0;
 }
