@@ -80,11 +80,22 @@ int main()
 
 void find(float *cari)
 {
-	if(*cari == s)
-	{	
-	system("cls");
-	cout<<"Input Anda salah, Masukan Angka"<<endl;
-	system("pause");
-	cari++;
+	cout<< endl << "Ingin Ulagi ? \n1.Ya \n2.Tidak"<<endl<< "= ";
+	cin>>pilihan;
+	switch(pilihan)
+	{
+		case 1:
+		system("cls");
+		return input(angka);
+		break;
+		exit:
+    	system("cls");
+    	cout<<"Okay"<<endl;
+		case 2:
+		goto exit;
+		break;
 	}
+	cari++;
+	system("cls");
+	cout<<"Input Anda salah"<<endl;
 }
