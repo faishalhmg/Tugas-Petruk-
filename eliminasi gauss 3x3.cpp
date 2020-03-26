@@ -1,24 +1,30 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
-int main()
-{
-    float a[3][3];
+	float a[3][3];
     float b[3];
     float (*pa)[3] = a;
     float *pb = b;
     float x,y,z;
-
-    cout << "Masukan Angka" << endl;
+    int *angka;
+	char s;
+    
+void find(float *cari);
+void input(int *angka)
+{
+	cout << "Masukan Angka" << endl;
     for(int i=0;i<3;i++)
     {
         for(int j=0;j<3;j++)
-        {
+        {	
             cout << "["<<i+1<<"]" << "["<<j+1<<"]" << " = ";
-            cin >> *(*(pa +i)+j);
+            cin >> *(*(pa +i)+j);    
         }
-    }
+    }	
+}
 
+int main()
+{
+   	input(angka);
     cout << endl << "Matriks" << endl;
     for(int i=0;i<3;i++)
     {
@@ -29,7 +35,6 @@ int main()
                 cout << "= x" << i+1 <<endl;
         }
     }
-
     cout << endl << "Masukan Angka" << endl;
     for (int i=0;i<3;i++)
     {
@@ -68,6 +73,16 @@ int main()
                 cout << "= " << *(pb +i) <<endl;
         }
     }
-
+    find(*a);
     return 0;
+}
+
+void find(float *cari)
+{
+	if(*cari == s){	
+	system("cls");
+	cout<<"Input Anda salah, Masukan Angka"<<endl;
+	system("pause");
+	cari++;
+}
 }
